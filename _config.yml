@@ -1,0 +1,55 @@
+title: Apollo Documentation
+description: Ascension Engineering, Inc.
+author: Apollo Documentation
+logo: assets/asc_eng.svg
+github: https://github.com/AscensionEngineering/
+about: Ascension Engineering, Inc.
+# disqus_shortname: aboutashu
+# google_analytics: UA-72862926-1
+urls:
+    - text: Home
+      url: /
+      icon: fa-home
+      layout: post
+    - text: About
+      url: /about/
+      icon: fa-comments
+    - text: Projects
+      url: /projects/
+      icon: fa-desktop
+    - text: Resume
+      url: '#'
+      icon: fa-graduation-cap
+    - text: Github
+      url: https://github.com/ashutosh2k12
+      icon: fa-github
+      
+# social:
+#     - icon: fa-facebook
+#       link: '#'
+#     - icon: fa-skype
+#       link: '#'
+#     - icon: fa-twitter
+#       link: '#'
+#     - icon: fa-linkedin
+#       link: '#'
+#     - icon: fa-stack-exchange
+#       link: '#'
+
+share:
+  twitter_username: \#
+  fb_appid: 000000000000
+
+
+enableTags: true
+tagarray: []
+
+url: "http://localhost:4000"
+baseurl: "/"
+paginate: 20
+per_page: 20
+paginate_path: "/page:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
