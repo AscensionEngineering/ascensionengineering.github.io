@@ -44,7 +44,7 @@ share:
 enableTags: true
 tagarray: []
 
-url: "http://localhost:4000"
+url: "http://ascensionengineering.github.io/apollo-docs"
 baseurl: "/"
 paginate: 20
 per_page: 20
