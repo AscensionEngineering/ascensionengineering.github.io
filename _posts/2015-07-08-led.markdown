@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Hardware Help: LED"
+date:   2015-07-19 13:20:30
+categories: docs
+---
+
+	LED
+
+An LED is a light-emitting diode. LEDs are, as the name implies, a type of diode. Diodes are a special kind of device that only conduct electricity in one direction, and an LED is a variation that emits light while it is conducting electricity. Once a diode *starts* conducting, it begins to act like a short-circuit in the wire. Short-circuits cause things to heat up really fast and explode, so that's not what we want at all. We have to pair a diode with a resistor in order to limit the current. This is called a current-limiting resistor, and the behavior of the resistor simply follows the equation `V = I*R`. If we only want 10mA to flow along a path, we might put a 500 ohm resistor in, because our pins output 5V, so therefore `5 = 10mA * R` which means that `5 / (10mA) = R`, `R = 5 / 0.01`, `R = 500 ohms`.

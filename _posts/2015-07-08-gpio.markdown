@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Hardware Help: GPIO"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	GPIO
+
+GPIO stands for General Purpose Input/Output. The GPIO pins on an [AVR MCU](% post_url 2015-07-08-avr-mcu %) allow you to receive (input) and send (output) logical ones and zeros. These logic values are represented by 5 volts (5V) for a one and 0 volts (0V) for a zero. These pins are accessible through the headers on the Arduino, where you can plug wires in.

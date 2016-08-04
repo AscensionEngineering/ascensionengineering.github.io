@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Keyword Help: void"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keyword: void
+
+This keyword is used to refer to something that lacks a type, such as functions without a return value, or pointers with no size information.
+
+A void* has the special ability for anything to be cast to it, and anything can be cast from it. Generally, that is not a good idea, unless you really know what you're doing, so we recommend just sticking to using void to represent no type at all, as it does when you say that a function returns void, when a function returns nothing at all.
+
+Usage:
+
+	void hello(){
+
+		cout << "Hello" << endl;
+
+	}
+
+	void *x; //x has no size information with it, be very careful with these!

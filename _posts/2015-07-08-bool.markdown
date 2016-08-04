@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Keyword Help: bool"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keywords: bool, true, false
+
+`bool` is a keyword used to declare a boolean value, either true or false. Booleans are the same size as integers.
+Booleans are usually used with the reserved words true and false, though integers can be used.
+
+true and false evaluate to 1 and 0, respectively. You should, however, use the keywords when using booleans, because it makes your code more readable.
+
+Usage:
+
+you can assign values directly
+
+	bool val0 = true;
+	bool val1 = false;
+	bool val2 = 0;		//false
+	bool val3 = 1;		//true
+	bool val4 = 1234;	//also true
+	bool val5 = val2;       //now equal to val2, which is false
+
+you can also set a bool equal to the result of a comparison:
+
+	int x = 5;
+	bool xIsFive = (x == 5); //xIsFive is now true
+	bool xIsTen = (x == 10); //xIsTen is now false
+	bool xIsLessThanFour = (x < 4); //xIsLessThanFour is false

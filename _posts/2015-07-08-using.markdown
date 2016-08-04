@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Keyword Help: using, namespace"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keyword: using, namespace
+
+This keyword is used when you want to use a namespace, or use something out of a namespace.
+
+Namespaces are used to avoid name conflicts. Sometimes importing a whole namespace can cause a conflict, so you might only want to import one thing.
+
+Sometimes, you have a function you want to call rename, and this lets you can do that as well.
+
+Usage:
+
+	using namespace std;				//use the entire STD namespace
+	using CSC2100::someFunction;		//use only this function rather than the whole namespace
+	using f = CSC2100::otherFunctionWithAReallyLongAnnoyingName;	//use this function, but give it a new name, because this one sucks

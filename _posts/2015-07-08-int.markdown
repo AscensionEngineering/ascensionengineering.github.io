@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Keyword Help: int"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keyword: int
+
+This keyword is used to declare a variable of type int, a signed 16-bit integer at a minimum, which can hold values between -32,768 and 32,767. On desktop computers, `int` is nearly always 32-bit, but the Arduino is actually using an 8-bit microprocessor, so the size is reduced to 16-bit to be faster. See [Performance Considerations]({% post_url 2015-07-08-performance-considerations %}) for things you should watch out for when writing software.
+
+Usage:
+
+	int x = 5; // X is an integer value that contains 5.

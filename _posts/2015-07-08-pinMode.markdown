@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Function Help: pinMode"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	pinMode
+
+	void pinMode(uint8_t pin, uint8_t mode);
+
+This function sets the pin specified to the mode specified.
+There are two modes you can use: INPUT and OUTPUT, for reading a value, or setting a value, respectivley.
+
+Usage:
+
+	//I want pin 5 to read, and pin 8 to write
+	pinMode(5, INPUT);
+	pinMode(8, OUTPUT);
+
+

@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Keyword Help: if, else"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+	keywords: if, else if, else
+
+These keywords are used in decision making. They can be chained together as much as needed. The general format is:
+
+	if (<expr>){
+		//do something
+	} else if (<expr>){
+		//do something else
+	} else {
+		//do something else
+	}
+
+where <expr> is something that evaluates to a boolean, you can have as many else-if's as you want (including zero), and the else is optional.
+
+Usage:
+
+	int x = 5;
+	if (x == 2){
+		//this will execute only if x is 2
+	} else if (x == 3){
+		//this will execute if x is 3
+		//it will not be checked if x is 2
+	} else {
+		//this will execute ONLY if the above do not.
+	}

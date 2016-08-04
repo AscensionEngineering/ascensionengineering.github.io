@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Keyword Help: new, delete"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keywords: new, new [], delete, delete []
+
+These keywords are used to dynamically allocate and deallocate memory.
+
+If you allocate memory with `new`, you MUST deallocate it with `delete`. Failing to do so can cause one of the worst kinds of bugs, known as memory leaks, and on an Arduino that has bare kilobytes of RAM, a memory leak will cause the Arduino to crash very quickly, and you won't get a message telling you that it crashed. It will just be in a crashed state, doing nothing at all, until you reset it.
+
+`new[]` and `delete[]` are used for allocating and deallocating arrays. Same rules apply with them, just make sure to only use `delete[]` with `new[]` and `delete` with `new`... mix and match is not a good idea.
+
+Usage:
+
+	int *x = new int; 	//make me a new integer;
+	*x = 5;				//x points to an integer, which is 5.
+	delete x;			//x points to the same spot, but it has been freed
+
+	x = new int[5];		//now x points to an array of five integers
+
+	delete [] x;		//x points to the same spot, but all 5 slots have been freed.

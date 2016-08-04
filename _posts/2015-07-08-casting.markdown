@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Keyword Help: casting"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+    keywords: const_cast, dynamic_cast, reinterpret_cast, static_cast
+
+These keywords are what we call casts. They tell the compiler to treat data in a different manner than normal.
+Their syntax generally is:
+
+	some_cast<type>(variable);
+
+where something_cast is one of the below, type is a variable type, and variable is the variable to be cast.
+
+	const_cast:			Tell the compiler to treat a variable as if it were or were not constant.
+	dynamic_cast:		Determine if a cast can be made at runtime. If not, it will throw a bad_cast exception.
+	reinterpret_cast:	Will cast as a value, forgetting about any type checks. 
+	static_cast:		Determine if a cast can be made at compile-time. Will cause a compiler error if it cannot be made.
+
+Generally, I recommend sticking to static_cast, because the other three are less safe and should only be used if you have a good reason for doing using them.
+
+Usage:
+
+    int x = 1;
+    int y = 4;
+     
+    float xOverY = x / static_cast<float>(y); //tell the compiler to treat this a floating-point division

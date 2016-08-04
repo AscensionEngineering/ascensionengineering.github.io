@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Hardware Help: Resistor"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	Resistor
+
+A resistor is a very simple device, usually made out of some kind of ceramic, that simply *resists* the flow of electricity -- it doesn't conduct electricity as well as a normal wire. But, even wire isn't a perfect conductor, so every wire has a resistance, it's just really close to zero. If you have a long enough, thin enough wire, you can start to see some noticeable resistance. This is why wires that carry a lot of power are thick, that way you lose less energy to resistance in the wire.
+
+The governing equation for many things in electricity is `V = I*R`, where V is voltage in volts, I is current in amps, and R is resistance in ohms. If you have a long wire that has 0.1 ohms of resistance, and you are putting 20 amps into it, you'll be losing 2 volts across the wire. So, you might be putting 12 volts into your system through that wire, but only 10 volts are making it all the way to your circuit. For everything we do in this class though, we'll only be dealing with milliamps of current and extremely short wires, so we won't easily be able to see or measure the effect of resistance in wires, only resistors.

@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Function Help: long"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	long
+
+	unsigned long micros();
+
+This function returns the number of microseconds since the Arduino began running the current program.
+It can be used to time things even quicker than a call to millis().
+Its value will reset after about 70 minutes.
+
+Usage:
+
+	unsigned long startTime = micros();
+
+	//do something very quick
+
+	unsigned long endTime = micros();
+
+	unsigned long elapsedTime = endTime - startTime;
+
+

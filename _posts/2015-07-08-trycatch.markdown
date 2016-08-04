@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Keyword Help: try, catch, throw"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keywords: try, catch, throw
+
+These keywords are used in exception handling. Some code handles errors by throwing exceptions, which must be caught, or your program will crash.
+
+Exceptions are thrown with throw. Areas that may throw exception must be in a try-catch block.
+
+You must specify what kind of exception you want to catch, or it will not be caught. The exception is catch(...), which can catch anything.
+
+Usage:
+
+	try {
+
+		//some tricky code
+		throw new out_of_range();
+
+	} catch (out_of_range &it){ 	//you must specify what kind of exeption to catch
+
+		cerr << "On, no!" << endl;
+
+	} catch (...){ 					//this will catch anything
+
+		cerr << "Unknown exception!" << endl;
+
+	}

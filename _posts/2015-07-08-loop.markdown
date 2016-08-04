@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Function Help: loop"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	loop
+
+	void loop();
+
+This is the second function you must write in each Arduino program. After the Arduino is finished with the setup() function, it calls this function forever until the Arduino is reset or turned off.
+This is where the most of your code will go for any project.
+
+Usage:
+
+	void setup(){
+
+		//setup code goes here
+
+	} 
+
+	void loop(){
+
+		//alternate pin 1 HIGH and LOW every second once a second.
+		//Imagine there's an LED linked to it, and it's blinking every second.
+		digitalWrite(1, HIGH);
+		delay(1000);
+		digitalWrite(1, LOW);
+		delay(1000);
+
+	}
+
+

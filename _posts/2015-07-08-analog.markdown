@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Concept Help: Analog"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	Analog
+
+What is analog? Analog is essentially the opposite of digital. So, let's talk about what digital really means. A digital signal is one that has a predefined number of "steps" in it. You could have a digital signal that has a value of 0 at 0 volts, a value of 1 at 4 volts, a value of 2 at 8 volts, and a value of 3 at 12 volts. Voltages between those would _round_ to the nearest value. Computers deal almost exclusively in digital signals with two steps. A voltage of 0 volts is represented by a 0, and a voltage of 5 volts is represented by a 1. The top of voltage varies from device to device. Cutting-edge electronics like an Intel Core i7 run on less than 1.2 volts, which means that the difference between a 1 and a 0 is also just 1.2 volts.
+
+An analog signal is therefore a signal that _doesn't_ have steps. It is a _continuous_ signal, one with an infinite number of possible values. Even from 0 volts to 0.000001 volts, there are an infinite number of possible values for an analog signal. Since storing a number with infinite precision isn't very practical, microcontrollers like the Arduino can _read_ analog values as an approximation. Since 5 volts is the high voltage that the Arduino is powered with, that's the highest analog value it can read. The hardware in the Arduino that reads analog values is known as an _ADC_, an Analog to Digital Converter. The Arduino has a 10-bit ADC, so it represents the infinite values of the analog signal with 10-bits of digital steps, or 1,024 values from 0 to 1023. If the Arduino sees 5 volts on `A0`, it will read a value of 1023. If it sees a value of 2.5 volts, it will read a value of about 512.

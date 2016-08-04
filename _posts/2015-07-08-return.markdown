@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Keyword Help: return"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keyword: return
+
+This keyword is used to return a value from a function back to its caller. 
+
+All functions that return a type other than void must have a `return` statement in them.
+
+The `return` keyword can be used to exit a void function early if desired.
+
+Usage:
+
+	int add(int a, int b) {
+		return a + b; //compiler will get mad at me if I do not have a return, since I told it I would be returning an int!
+	}
+
+	void hello() {
+		cout << "Hello" << endl;
+		//no return needed
+	}
+
+	void helloIfTrue(bool val) {
+		if (!val) {
+			return; //you can exit early from a void function if you want.
+		} 
+		cout << "Hello" << endl;
+	}

@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Hardware Help: Button"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	Button
+
+A button is a hardware device that momentarily switches from separating two pieces of wire to connecting them when it is pushed. On our pushbuttons, there are four pins. When the button is pushed, it connects diagonally across on the inside.

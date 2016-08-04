@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Keyword Help: char"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keyword: char
+
+This keyword declares a variable of type `char` which holds a single character. It can also hold signed integers between -128 and 127.
+
+A char is defined by the C++ standard to be exactly one byte long which is eight bits.
+
+Usage:
+
+	char myChar = 'y'; 	//myChar has the ASCII value for y in it
+	char other	= 35;	//also valid

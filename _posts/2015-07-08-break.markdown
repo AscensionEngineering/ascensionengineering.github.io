@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Keyword Help: break"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+    keyword: break
+
+This keyword is used to break from a loop before the condition is false.
+
+Usage:
+	
+    int x = 0;
+  	//loop FOREVER...
+    while (true) {
+      //...unless x stops being zero
+    	if (x != 0) {
+    		break; //then break out of this loop
+    	}
+    }
+	//we're free!

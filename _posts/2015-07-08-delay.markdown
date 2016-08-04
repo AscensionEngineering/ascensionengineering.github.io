@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Function Help: delay"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	delay
+
+	void delay(unsigned long time);
+
+This function delays the program the given number of milliseconds.
+
+Usage:
+
+	//alternate pin 1 HIGH and LOW every second once a second.
+	//Imagine there's an LED linked to it, and it's blinking every second.
+	digitalWrite(1, HIGH);
+	delay(1000);
+	digitalWrite(1, LOW);
+	delay(1000);
+
+

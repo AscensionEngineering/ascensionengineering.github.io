@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Keyword Help: struct"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keyword: struct
+
+This keyword is used to define custom user data types.
+
+A `struct` can have any number of fields, which can be any already defined type, including primitaves, objects, and other structs. This means that a `struct` can have more than one value inside it, which is useful for almost every program. You might use a struct to represent a shipping address, which has a street address, an apartment number, a city, a state, and a zip code. Keeping up with all of that information separately in your program is dangerously error-prone, but a `struct` neatly packages it all together in one convenient package so you don't get pieces mixed up with other addresses or just lose them altogether.
+
+Usage:
+
+	struct MyStruct {
+
+		int x;		//each field must have a type and name
+		float y;
+		char *z;
+
+	}; //don't forget the semicolon!
+
+	MyStruct thing; //thing is a variable of type MyStruct, rather than int or something.
+
+	thing.x = 0;					//fields are referred to by name with the . operator
+	thing.y = 1.25;
+	thing.x = "This is my struct!";

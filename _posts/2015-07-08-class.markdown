@@ -1,0 +1,66 @@
+---
+layout: post
+title:  "Keyword Help: class"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keywords: class, public, private, protected, this
+
+These keywords are used when defining your own objects. Objects can be quite complicated.
+
+A class is similar to a struct, except it can have functions attached to it as well as variables, and they can have varying levels of visibility.
+
+A class has two special methods, called the constructor and destructor. They are automatically called when an object is created or destroyed, respectively. They are responsible for setting up the object, and freeing any of its resources. If you do not specify one, you will still get a default one that does nothing, courtesy of the compiler.
+
+Variables and functions within a class can be marked public, protected, or private:
+
+	public:		Anyone can use these
+	protected:	Only me and my children can use these
+	private:	Only I can use these
+
+Within an object, you can obtain a pointer to yourself with the this keyword.
+
+Functions defined in an object must have a body defined somewhere.
+
+Usage:
+
+	class MyClass {
+
+		public:		//these can be seen by anyone who has the object
+
+			MyClass(int _x);	//constructor
+			~MyClass();			//destructor
+
+			void setX(int newX){	//you can define a function here
+
+				x = newX; 
+
+			}
+
+			int getX();
+
+		protected:	//these can be seen only by the object istslf and its children
+
+			protectedFunction(){}
+
+		private:	//these can be seen only by the object itself
+
+			int x; //my number!
+
+	}
+
+	//or you can define functions here, like this
+	MyClass::MyClass(int _x){
+
+		x = _x;
+
+	}
+
+	MyClass::~MyClass(){} //empty
+
+	void MyClass::getX(){
+
+		return this->x; //you can use the this pointer too
+
+	}

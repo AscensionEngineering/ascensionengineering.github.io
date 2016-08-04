@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Function Help: setup"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	setup
+
+	void setup();
+
+This is one of the two functions that you will need to write for any Arduino project. When the Arduino starts up, it calls this function ONCE and only once. 
+It's job is to perform any kinds of setup needed before the program's main loop starts. Some things you might do in this function are initialize libraries that need it, set pins to input or output modes, and putting the arduino in its starting state by setting certain pins to HIGH or LOW if needed.
+
+Usage:
+
+	void setup(){
+
+		//I'm going to use pins 1, 2, 3 as output pins
+		pinMode(1, OUTPUT);
+		pinMode(2, OUTPUT);
+		pinMode(3, OUTPUT);
+
+		//and 4 is an input
+		pinMode(4, INPUT);
+
+	}
+
+

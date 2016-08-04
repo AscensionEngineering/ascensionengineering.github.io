@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Keyword Help: enum"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	keyword: enum
+
+This keyword is used to create an enumerated data type. In other words, you're giving names to integers.
+
+You can specify an enum's type if you want. If you don't they will be of type int by default.
+You can also specify the values. If you don't the compiler will pick them for you, usually starting at 0 and going upwards.
+
+Enumerated types can be returned from functions, used as function arguments, and be declared as variables.
+
+Usage:
+
+	enum MyEnum0 { ZERO, ONE, TWO };			//default int from zero
+	enum MyEnum2 : char { A = 'a', B = 'b' };	//this one is a char, and I'm specifying values
+
+	MyEnum0 exampleFunction(MyEnum2 arg);		//this function returns a MyEnum0, and takes one MyEnum2 as an argument
+
+	MyEnum0 x = ZERO;							//x is of type MyEnum0, and is initialized to the value ZERO
+
+	MyEnym2 y = exampleFunction(x);				//y is of type MyEnum2, and is set equal to the result of that function call.

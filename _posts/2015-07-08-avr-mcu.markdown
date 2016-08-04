@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Hardware Help: AVR Microcontroller"
+date:   2015-07-08 15:37:30
+categories: docs
+---
+
+	AVR MCU
+
+What is an AVR microcontroller? An AVR microcontroller is an integrated circuit (IC), also known colloquially as a chip, that contains memory of various kinds and is able to process instructions that operate on that memory and on the real world, through the pins in it. On the Arduino Uno, for instance, the AVR microcontroller is the big long chip plugged into a sockert on the printed circuit board.
