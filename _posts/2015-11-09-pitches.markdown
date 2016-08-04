@@ -2,7 +2,7 @@
 layout: post
 title:  "Pitches"
 date:   2015-11-09 22:38:30
-categories: docs
+categories: others
 ---
 
 Create a .h file in the same folder as your lab containing the code below.  Another (not recommended) option is to copy and paste this code at the top of your lab.

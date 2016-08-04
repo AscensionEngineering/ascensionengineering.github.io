@@ -2,7 +2,7 @@
 layout: post
 title:  "Lab 5: Speed Game (Part 1)"
 date:   2015-07-01 13:22:30
-categories: docs
+categories: others
 ---
 
 It's time for a fun lab! For this lab, we're going to need two buttons, two normal LEDs, and the big tri-color LED.

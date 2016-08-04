@@ -2,7 +2,7 @@
 layout: post
 title:  "Hardware Help: Tricolor LED"
 date:   2015-07-08 15:37:30
-categories: docs
+categories: others
 ---
 
 	Tricolor LED

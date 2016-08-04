@@ -2,7 +2,7 @@
 layout: post
 title:  "Lab 10: Music Box"
 date:   2015-07-19 13:10:30
-categories: docs
+categories: others
 ---
 
 In this final structured lab, we will be making a small music box. We will simply be using the piezo element with some software for this lab. Connect one wire of the Piezo element to `Pin 8` and one wire to `Gnd`.

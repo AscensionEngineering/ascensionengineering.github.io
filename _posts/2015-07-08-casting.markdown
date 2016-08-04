@@ -2,7 +2,7 @@
 layout: post
 title:  "Keyword Help: casting"
 date:   2015-07-08 15:37:30
-categories: docs
+categories: others
 ---
 
     keywords: const_cast, dynamic_cast, reinterpret_cast, static_cast

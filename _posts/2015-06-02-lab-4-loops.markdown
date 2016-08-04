@@ -2,7 +2,7 @@
 layout: post
 title:  "Lab 4: Loops"
 date:   2015-06-02 14:35:30
-categories: docs
+categories: others
 ---
 
 In this lab, we're going to remove the piezo element and add two more LEDs, for a total of three LEDs.

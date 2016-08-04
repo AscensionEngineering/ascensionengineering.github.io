@@ -2,7 +2,7 @@
 layout: post
 title:  "Lab 2: I/O With Analog and Arithmetic"
 date:   2015-05-14 14:35:30
-categories: docs
+categories: others
 ---
 This lab will focus on changing the previous lab to use an analog input, and replacing one of the LEDs with a piezoelectric speaker.
 

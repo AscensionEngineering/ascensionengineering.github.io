@@ -2,7 +2,7 @@
 layout: post
 title:  "Lab 9: Battery Tester"
 date:   2015-07-19 13:15:30
-categories: docs
+categories: others
 ---
 
 We will be making something directly useful: a battery tester! Specifically, we will want to be able to measure remaining charge in a 1.5V alkaline battery, such as AA and AAA batteries.

@@ -2,7 +2,7 @@
 layout: post
 title:  "Other Help: Performance Considerations"
 date:   2015-07-08 15:37:30
-categories: docs
+categories: others
 ---
 
 Understanding the limitations of the hardware you're working with and the sizes of the data types involved can be critical to writing well-performing code. Using a floating-point number on a desktop computer is usually fine, the performance difference versus integer isn't usually worth discussing for a single-threaded desktop application. However, the Arduino has no FPU (floating-point unit), so while integer operations may only take a clock cycle or two, a single floating point multiply operation can take well over 500 clock cycles on the Arduino, and some sources indicate well over 1000 clock cycles. This is because the floating point math is being emulated in software. Therefore, floating point math is hundreds of times slower than integer math on the Arduino.

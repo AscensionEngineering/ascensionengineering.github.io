@@ -2,7 +2,7 @@
 layout: post
 title:  "Lab 8: Lockbox"
 date:   2015-07-19 13:05:30
-categories: docs
+categories: others
 ---
 
 For this lab, we want to design a simple safe, which will use a display, some buttons, a piezo, and an LED. 

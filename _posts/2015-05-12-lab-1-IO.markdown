@@ -2,7 +2,7 @@
 layout: post
 title:  "Lab 1: Input / Output (I/O)"
 date:   2015-05-12 13:21:30
-categories: docs
+categories: others
 ---
 
 In this lab, you will learn the basics of how to control the real world with your code. We're going to use a button, two LEDs, and three resistors.

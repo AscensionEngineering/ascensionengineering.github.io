@@ -2,7 +2,7 @@
 layout: post
 title:  "Lab 6: Speed Game (Part 2)"
 date:   2015-07-01 14:44:30
-categories: docs
+categories: others
 ---
 
 It's time for another fun lab! For this lab, we're simply going to use the Arduino LCD Shield.

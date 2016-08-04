@@ -2,7 +2,7 @@
 layout: post
 title:  "Hardware Help: Temperature Sensor"
 date:   2015-07-08 15:37:30
-categories: docs
+categories: others
 ---
 
 	Temperature Sensor

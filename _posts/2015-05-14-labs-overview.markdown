@@ -2,7 +2,7 @@
 layout: post
 title:  "Overview of CSC2101 Labs"
 date:   2015-05-14 14:00:00
-categories: docs
+categories: others
 ---
 
 Throughout the semester, there will be a variety of labs. Here, we will provide an overview of each lab.

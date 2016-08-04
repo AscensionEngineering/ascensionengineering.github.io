@@ -1,7 +1,7 @@
 title: Apollo Documentation
 description: Ascension Engineering, Inc.
 author: Apollo Documentation
-logo: assets/asc_eng.svg
+logo: /assets/asc_eng.svg
 github: https://github.com/AscensionEngineering/
 about: Ascension Engineering, Inc.
 # disqus_shortname: aboutashu
@@ -44,7 +44,8 @@ share:
 enableTags: true
 tagarray: []
 
-url: "https://ascensionengineering.github.io/apollo-docs"
+# url: "https://ascensionengineering.github.io/apollo-docs"
+url: "http://127.0.0.1:4000"
 baseurl: "/"
 paginate: 20
 per_page: 20

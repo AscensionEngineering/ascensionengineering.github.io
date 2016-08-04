@@ -2,7 +2,7 @@
 layout: post
 title:  "Lab 7: A/C Unit"
 date:   2015-07-01 15:20:30
-categories: docs
+categories: others
 ---
 
 For this lab, we want to design a simple thermostat for an air conditioner. We're going to use the tri-color LED, a temperature sensor, and the LCD Shield.

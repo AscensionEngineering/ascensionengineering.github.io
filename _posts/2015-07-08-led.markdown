@@ -2,7 +2,7 @@
 layout: post
 title:  "Hardware Help: LED"
 date:   2015-07-19 13:20:30
-categories: docs
+categories: others
 ---
 
 	LED

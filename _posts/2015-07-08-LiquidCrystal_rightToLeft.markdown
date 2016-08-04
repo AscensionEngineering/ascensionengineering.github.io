@@ -2,7 +2,7 @@
 layout: post
 title:  "Function Help: LiquidCrystal::rightToLeft"
 date:   2015-07-08 15:37:30
-categories: docs
+categories: others
 ---
 
 	LiquidCrystal::rightToLeft
