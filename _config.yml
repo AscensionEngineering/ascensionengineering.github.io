@@ -46,7 +46,7 @@ tagarray: []
 
 # url: "https://ascensionengineering.github.io/apollo-docs"
 url: "http://127.0.0.1:4000"
-baseurl: "/"
+baseurl: "/apollo-docs/"
 paginate: 20
 per_page: 20
 paginate_path: "/page:num/"
