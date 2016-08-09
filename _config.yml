@@ -32,8 +32,8 @@ permalink: :title
 
 url: "https://ascensionengineering.github.io"
 # url: "http://127.0.0.1:4000"
-baseurl: "/apollo-docs/"
-fullurl: "https://ascensionengineering.github.io/apollo-docs/"
+baseurl: "/"
+fullurl: "https://ascensionengineering.github.io/"
 paginate: 20
 per_page: 20
 paginate_path: "/page:num/"
