@@ -28,7 +28,7 @@ urls:
 # enableTags: true
 # tagarray: []
 
-permalink: /:title
+permalink: :title
 
 url: "https://ascensionengineering.github.io/apollo-docs"
 # url: "http://127.0.0.1:4000"
