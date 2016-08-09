@@ -29,16 +29,16 @@
           <meta content="{{ site.description }}" property="og:description">
         {% endif %}
         {% if page.url %}
-          <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+          <meta content="{{ site.fullurl }}{{ page.url }}" property="og:url">
         {% endif %}
         {% if page.date %}
           <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-          <meta content="{{ site.url }}/about/" property="article:author">
+          <meta content="{{ site.fullurl }}/about/" property="article:author">
         {% endif %}
         {% if page.image %}
-          <meta content="{{ site.url }}/static/img/posts/{{ page.image }}" property="og:image">
+          <meta content="{{ site.fullurl }}/static/img/posts/{{ page.image }}" property="og:image">
         {% else %}
-          <meta content="{{ site.url }}/static/img/logo-high-resolution.png" property="og:image">
+          <meta content="{{ site.fullurl }}/static/img/logo-high-resolution.png" property="og:image">
         {% endif %}
         {% if page.categories %}
           {% for category in page.categories limit:1 %}
@@ -59,7 +59,7 @@
           <meta name="twitter:title" content="{{ site.title }}">
         {% endif %}
         {% if page.url %}
-          <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+          <meta name="twitter:url" content="{{ site.fullurl }}{{ page.url }}">
         {% endif %}
         {% if page.description %}
           <meta name="twitter:description" content="{{ page.description }}">
@@ -67,7 +67,7 @@
           <meta name="twitter:description" content="{{ site.description }}">
         {% endif %}
         {% if page.header-img %}
-          <meta name="twitter:image:src" content="{{ site.url }}/{{ page.header-img }}">
+          <meta name="twitter:image:src" content="{{ site.fullurl }}/{{ page.header-img }}">
         {% endif %}
 
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
@@ -80,19 +80,19 @@
         <!-- Core BootStrap CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <!-- Material Design CSS -->
-        <link rel="stylesheet" href="{{ site.url }}/static/css/bootstrap-material-design.min.css">
+        <link rel="stylesheet" href="{{ site.fullurl }}/static/css/bootstrap-material-design.min.css">
 
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="{{ site.url }}/static/css/syntax.css">
+        <link rel="stylesheet" href="{{ site.fullurl }}/static/css/syntax.css">
 
         <!-- Custom CSS -->        
-        <link rel="stylesheet" href="{{ site.url }}/static/css/thickbox.css">
-        <link rel="stylesheet" href="{{ site.url }}/static/css/main.css">
-        <link rel="stylesheet" href="{{ site.url }}/static/css/projects.css">
+        <link rel="stylesheet" href="{{ site.fullurl }}/static/css/thickbox.css">
+        <link rel="stylesheet" href="{{ site.fullurl }}/static/css/main.css">
+        <link rel="stylesheet" href="{{ site.fullurl }}/static/css/projects.css">
 
         <script type="text/javascript">
           //loadingImage is relative to project dir
-          var tb_pathToImage = "{{ site.url }}/static/img/loadingAnimation.gif";
+          var tb_pathToImage = "{{ site.fullurl }}/static/img/loadingAnimation.gif";
         </script>
         {% include analytics.html %}
     </head>
@@ -129,7 +129,7 @@
       {% endif %}
       {% if page.categories.size > 0 %}
     <span class="categories">
-        &raquo; {% for category in page.categories %}<a href="{{ site.url }}/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
+        &raquo; {% for category in page.categories %}<a href="{{ site.fullurl }}/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
     </span>
     {% endif %}
       </p>
@@ -181,9 +181,9 @@
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-        <script src="{{ site.url }}/static/js/thickbox-compressed.js"></script>
-        <script src="{{ site.url }}/static/js/material.min.js"></script>
-        <script src="{{ site.url }}/static/js/main.js"></script>
-        <script src="{{ site.url }}/static/js/projects.js"></script>
+        <script src="{{ site.fullurl }}/static/js/thickbox-compressed.js"></script>
+        <script src="{{ site.fullurl }}/static/js/material.min.js"></script>
+        <script src="{{ site.fullurl }}/static/js/main.js"></script>
+        <script src="{{ site.fullurl }}/static/js/projects.js"></script>
     </body>
 </html>

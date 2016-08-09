@@ -20,33 +20,20 @@ urls:
     - text: Resume
       url: '#'
       icon: fa-graduation-cap
-    - text: Github
-      url: https://github.com/ashutosh2k12
-      icon: fa-github
+#    - text: Github
+#      url: https://github.com/ashutosh2k12
+#      icon: fa-github
       
-# social:
-#     - icon: fa-facebook
-#       link: '#'
-#     - icon: fa-skype
-#       link: '#'
-#     - icon: fa-twitter
-#       link: '#'
-#     - icon: fa-linkedin
-#       link: '#'
-#     - icon: fa-stack-exchange
-#       link: '#'
 
-share:
-  twitter_username: \#
-  fb_appid: 000000000000
+# enableTags: true
+# tagarray: []
 
-
-enableTags: true
-tagarray: []
+permalink: /:title
 
 url: "https://ascensionengineering.github.io/apollo-docs"
 # url: "http://127.0.0.1:4000"
-baseurl: "/apollo-docs/"
+baseurl: "/"
+fullurl: "https://ascensionengineering.github.io/apollo-docs/"
 paginate: 20
 per_page: 20
 paginate_path: "/page:num/"
