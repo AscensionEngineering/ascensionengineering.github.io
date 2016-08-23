@@ -5,6 +5,8 @@ date:   2015-05-11 12:37:30
 categories: others
 ---
 
+## 1. Download the IDE
+
 To get started with Apollo, you need to download and install the Arduino IDE.
 
 Debian / Ubuntu Linux:
@@ -28,6 +30,8 @@ Windows:
 3. You will probably need to follow [these instructions][Instructions] to install additional drivers.
   1. [This page][ScreenshotTutorial] is slightly outdated, but could be helpful.
 
+## 2. Download the libraries
+
 After installing the IDE, download the folowing libraries and extract them to your Arduino libraries folder located at 
 C:\Users\your name\Documents\Arduino\libraries
 
@@ -37,6 +41,8 @@ the libraries can be downloaded from these links:
 - [Adafruit's TSL2561 Driver (light sensor)](https://github.com/adafruit/TSL2561-Arduino-Library/archive/master.zip)
 - [Adafruit's Unified Sensor Driver (part of the light sensor driver)](https://github.com/adafruit/Adafruit_Sensor/archive/master.zip)
 - [Adafruit's BMP280 Driver (temperature and pressure sensor)](https://github.com/adafruit/Adafruit_BMP280_Library/archive/master.zip)
+
+## 3. Test that it works
 
 Now that the Arduino IDE is installed, it is time to make sure everything is working.
 
