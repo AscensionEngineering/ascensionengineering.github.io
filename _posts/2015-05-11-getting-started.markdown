@@ -31,7 +31,7 @@ Windows:
 After installing the IDE, download the folowing libraries and extract them to your Arduino libraries folder located at 
 C:\Users\your name\Documents\Arduino\libraries
 
-the libraries can be downoaded from these links:
+the libraries can be downloaded from these links:
 
 - [Ascension's LiquidCrystalShift Driver (LCD module)](https://github.com/coder543/LiquidCrystalShift/archive/master.zip)
 - [Adafruit's TSL2561 Driver (light sensor)](https://github.com/adafruit/TSL2561-Arduino-Library/archive/master.zip)
