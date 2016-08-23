@@ -67,7 +67,7 @@ void setup() {
 //text and values on the screen by using print statements
 void loop() { 
     lcd.setCursor(0, 0); //resets the cursor to the top left of the screen 
-    lcd.print("Hello World!"); //prints the word "Apollo!" to the screen
+    lcd.print("Hello World!"); //prints "Hello World!" to the screen
 }
 ```
 
