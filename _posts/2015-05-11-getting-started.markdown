@@ -28,6 +28,15 @@ Windows:
 3. You will probably need to follow [these instructions][Instructions] to install additional drivers.
   1. [This page][ScreenshotTutorial] is slightly outdated, but could be helpful.
 
+After installing the IDE, download the folowing libraries and extract them to your Arduino libraries folder located at 
+C:\Users\your name\Documents\Arduino\libraries
+
+the libraries can be downoaded from these links.
+[Ascension's LiquidCrystalShift Driver (LCD module)](https://github.com/coder543/LiquidCrystalShift/archive/master.zip)
+Adafruit's TSL2561 Driver (light sensor)
+Adafruit's Unified Sensor Driver (part of the light sensor driver)
+Adafruit's BMP280 Driver (temperature and pressure sensor)
+
 Now that the Arduino IDE is installed, it is time to make sure everything is working.
 
 1. Open the IDE
