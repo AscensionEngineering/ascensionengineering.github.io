@@ -39,6 +39,7 @@ If your Arduino IDE is configured correctly and your Apollo is plugged in, you s
 
 Now lets test out the display, copy and past the folowing code into the Arduino ide.
 
+```
 #include <LiquidCrystalShift.h>   //This line of code creates a global instance of the LCD module
 LiquidCrystalShift lcd(7, 8, A3); //The next thing that needs to be done is to place "lcd.begin(16, 2)"
                                   //in your setup function, as shown below
@@ -52,6 +53,7 @@ void loop() {
     lcd.setCursor(0, 0); //resets the cursor to the top left of the screen 
     lcd.print("Apollo!"); //prints the word "Apollo!" to the screen
 }
+```
 
 If you run the code now, you should see Hello, World on the display!
 
