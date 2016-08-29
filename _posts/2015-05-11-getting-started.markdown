@@ -49,6 +49,7 @@ Now that the Arduino IDE is installed, it is time to make sure everything is wor
 1. Open the IDE
 2. Go to File -> Examples -> 01.Basics -> Blink
 3. Go to Tools -> Serial Port and then click on the Arduino
+4. Go to Tools -> Board -> Genuino Uno
 3. Click the button in the toolbar that looks like an arrow facing to the right.
 
 If your Arduino IDE is configured correctly and your Apollo is plugged in, you should have an LED blinking on it now.
