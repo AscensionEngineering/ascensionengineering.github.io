@@ -6,10 +6,7 @@ categories: others
 ---
 This lab will focus on changing the previous lab to use an analog input, and replacing one of the LEDs with a piezoelectric speaker.
 
-This is the circuit layout for this week:
-![Lab 2 diagram]({{site.url}}/images/lab_2.jpg)
-
-The first LED from last lab is still connected to `pin 4`, but now the second LED has been replaced with a piezoelectric speaker connected to `pin 5`, and the button has been replaced by a potentiometer. Note that we no longer need a resistor connected to pin 5 because piezo elements don't form a short circuit when they're on. The potentiometer is also connected to `A0`, analog input 0, rather than pin 3, and there are some other changes to the circuit there.
+The first LED from last lab is still connected to `pin 10`, but now instead of the second LED, let's use the piezoelectric speaker connected to `pin 9`, and instead of the button, let's use a potentiometer. Note that we no longer need a resistor connected to pin 5 because piezo elements don't form a short circuit when they're on. The potentiometer we're using is the leftmost one, which is connected to `A0`, analog input 0, rather than `pin 3`, and there are some other changes to the circuit there.
 
 Background
 ==========
@@ -33,7 +30,7 @@ Our goal is to make an LED and a piezo element blink and click, respectively, fo
 
 `delay` simply accepts an integer specifying how many milliseconds to wait. `delay(10)` will stop the code from running for 10 milliseconds. `analogRead` works just like `digitalRead` worked in the last lab, except it will return an `int`eger approximation instead of a boolean `true`/`false`. For example, `int value = analogRead(0);` will read the value from `A0` into `value`. You've already used `digitalWrite` and `pinMode`, but to recap, `digitalWrite` sets a pin to either 5 volts or 0 volts. `pinMode` will let you set a pin to be an `INPUT` or an `OUTPUT`. Pin `A0` is an analog input, so you won't set the `pinMode` on it. It _cannot_ be anything else, at least as far as we're concerned. There are advanced ways to re-use analog inputs, but don't worry about them here. Therefore, all you have to worry about is making the LED and Piezo into outputs.
 
-**Useful tip:** `HIGH` is another way to write `1`, and `LOW` is another way to write `0` on the Arduino. Try to avoid `magic numbers` as much as possible, which are numbers that seem to come from nowhere. `digitalWrite(greenLED, HIGH)` is _much_ easier to understand than `digitalWrite(4, 1)`. Before the `void setup()` function, you can declare "global variables" simply by writing code like `int greenLED = 4;`. Try it! It will make your code better.
+**Useful tip:** `HIGH` is another way to write `1`, and `LOW` is another way to write `0` on the Arduino. Try to avoid `magic numbers` as much as possible, which are numbers that seem to come from nowhere. `digitalWrite(firstLED, HIGH)` is _much_ easier to understand than `digitalWrite(10, 1)`. Before the `void setup()` function, you can declare "global variables" simply by writing code like `int firstLED = 10;`. Try it! It will make your code better.
 
 To do this lab, we want to `analogRead` the value of the potentiometer, turn on the LED and the Piezo, `delay` for 10ms, then turn off the LED and the Piezo. We then want to `delay` for however many milliseconds the value of the potentiometer was. If the potentiometer is about halfway, we'll be delaying for about 500ms, or half a second, for example.
 

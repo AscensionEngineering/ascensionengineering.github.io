@@ -10,12 +10,12 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 ### [Lab 0: Getting Started]({% post_url 2015-05-11-getting-started %})  
 **Objective:** To get the Arduino environment set up  
 **New Functions and Keywords:** [`lcd.begin`]({% post_url 2015-07-08-LiquidCrystal_begin %}), [`lcd.print`]({% post_url 2015-07-08-LiquidCrystal_print %})  
-**Description:** Teaches you how to install the Arduino environment and use a basic program on the Arduino. You will also use the Arduino LCD shield to write messages to the world!
+**Description:** Teaches you how to install the Arduino environment and use a basic program on the Arduino-compatible Apollo board. You will also use the Apollo's LCD display to write messages to the world!
 
 ### [Lab 1: I/O]({% post_url 2015-05-12-lab-1-IO %})  
 **Objective:** Learn how to use a microcontroller to interact with the real world, through buttons and LEDs.  
 **New Functions and Keywords:** [`pinMode`]({% post_url 2015-07-08-pinMode %}), [`digitalRead`]({% post_url 2015-07-08-digitalRead %}), [`digitalWrite`]({% post_url 2015-07-08-digitalWrite %}), [`bool`]({% post_url 2015-07-08-bool %})  
-**Description:** In this lab, you will construct a simple circuit that consists of a button and two LEDs. When the button isn't being pressed, one LED is on and the other is off. However, while the button is being pressed, the LEDs should switch state. This shows how to use one input, a button, and two outputs.
+**Description:** In this lab, you will use a button and two LEDs. When the button isn't being pressed, one LED is on and the other is off. However, while the button is being pressed, the LEDs should switch state. This shows how to use one input (a button) and two outputs (the LEDs).
 
 ### [Lab 2: I/O with Analog and Arithmetic]({% post_url 2015-05-14-lab-2-IO-analog %})  
 **Objective:** This lab teaches you how to deal with analog inputs.  
@@ -40,7 +40,7 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 ### [Lab 6: Speed Game (part 2)]({% post_url 2015-07-01-lab-6-speed-game-2 %})  
 **Objective:** To use loops to measure time elapsed.  
 **New Functions and Keywords:** `readButtons`, [`lcd.setCursor`]({% post_url 2015-07-08-LiquidCrystal_setCursor %}), [`lcd.clear`]({% post_url 2015-07-08-LiquidCrystal_clear %})  
-**Description:** Here, we will build the speed game from last time, but using the Arduino LCD Shield. The buttons on the shield will be used instead of the buttons from last time, and all of the LEDs will be replaced with the LCD. On the LCD, we want to show what state we're in, whether that's waiting on the random time to elapse, waiting on a user to push a button, or showing the end game screen. On the end game screen, we want to show who won and how long it took each user to push their button.  
+**Description:** Here, we will build the speed game from last time, but using the Apollo's LCD display. On the LCD, we want to show what state we're in, whether that's waiting on the random time to elapse, waiting on a user to push a button, or showing the end game screen. On the end game screen, we want to show who won and how long it took each user to push their button.  
 
 ### [Lab 7: A/C unit]({% post_url 2015-07-01-lab-7-ac-unit %})  
 **Objective:** Responding to changing conditions iteratively. (PWM + loops)  
@@ -50,11 +50,11 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 ### [Lab 8: Lockbox]({% post_url 2015-07-19-lab-8-security-system %})  
 **Objective:** Learn about arrays  
 **New Functions and Keywords:** `arrays`  
-**Description:** We will store a sequence of up, down, left, and right button pushes in an array as the password. The Arduino will start in an "unlocked" mode. When the select button is pushed, the Arduino will "lock" the security system. When the select button is pushed the next time, the user must enter the password exactly as it is in the array, otherwise the alarm will sound with a Piezo element and a red LED.
+**Description:** We will store a sequence of up, down, left, and right button pushes in an array as the password. The Apollo will start in an "unlocked" mode. When the select button is pushed, the Apollo will "lock" the security system. When the select button is pushed the next time, the user must enter the password exactly as it is in the array, otherwise the alarm will sound with a Piezo element and an LED.
 
 ### [Lab 9: Battery Tester]({% post_url 2015-07-19-lab-9-battery-tester %})  
 **Objective:** Do something interesting and practical    
-**Description:** Using the Arduino's built-in analog input hardware, we will create a simple alkaline battery tester to tell us how much charge is left in the battery!  
+**Description:** Using the Apollo's built-in analog input hardware, we will create a simple alkaline battery tester to tell us how much charge is left in the battery!  
 
 ### [Lab 10: Music Box]({% post_url 2015-07-19-lab-10-music-box %})  
 **Objective:** Learn about structs and arrays of structs  

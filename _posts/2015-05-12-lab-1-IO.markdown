@@ -5,22 +5,17 @@ date:   2015-05-12 13:21:30
 categories: others
 ---
 
-In this lab, you will learn the basics of how to control the real world with your code. We're going to use a button, two LEDs, and three resistors.
+In this lab, you will learn the basics of how to control the real world with your code. We're going to use a button and two LEDs.
 
-Connect them like this:
-![Lab 1 diagram]({{site.url}}/images/lab_1.jpg)
+The button is connected to pin 3, and the LEDs we're going to use are connected to pins 10 and 12.
 
-The first button is connected to pin 3, LED 1 is connected to pin 4, and LED 2 is connected to pin 5.
-
-**please note: LEDs are polarized, the long leg must be connected to the positive voltage. The short leg must be connected to the resistor that connects to ground. It will not turn on otherwise. Also, the buttons are already properly sized. Do not try to extend the button's legs further -- that will only make things harder as you will be *over*extending the legs. The diagram above is meant to show you which things connect together, the exact number of rows and columns is not important.**
-
-For this lab, we're going to start out by just using LED 1 and the button. After we get LED 1 working, we'll add LED 2 into the mix to make it a little more interesting.
+For this lab, we're going to start out by just using LED 1 (pin 10) and the button. After we get LED 1 working, we'll add LED 2 (pin 12) into the mix to make it a little more interesting.
 
 Whenever the button is being pushed, we want LED 1 to turn on, but any time that the button is not being pushed, we want LED 1 to be turned off. On the Arduino, we can use a command (a function) called `digitalRead`. This will look at a pin and tell us whether it sees 5 volts or not. If the button is being pushed, pin 3 will have 5 volts flowing to it from the power supply. This is equivalent to `1` in binary.
 
-There is also another function, called `digitalWrite`. `digitalWrite` will take a 1 or a 0 and apply it on an output pin. So, if you `digitalWrite` a `1` to pin 4, then that pin will be connected to 5 volts internally. Since there's an LED connected to pin 4, it will now have power flowing through it and it will turn on.
+There is also another function, called `digitalWrite`. `digitalWrite` will take a 1 or a 0 and apply it on an output pin. So, if you `digitalWrite` a `1` to pin 4, then that pin will be connected to 5 volts internally. Since there's an LED connected to pin 10, it will now have power flowing through it and it will turn on.
 
-However, before we can use either `digitalWrite` or `digitalRead`, we need to tell the Arduino which pins we'll be reading from and which ones we'll be writing to! If we don't tell it what our intentions are, it's very hard to predict what it will do when we read or write the values of the pins. There is a function called `pinMode` that allows us to set the direction of the pin. Saying `pinMode(3, INPUT)` will set pin 3 to be an input, which is a pin you can read values from. If we say `pinMode(4, OUTPUT)`, it sets pin 4 to be an output, which is a pin you can write values to. If you write a `1` to a pin, the pin will turn on and go to 5 volts. If you write a `0` to a pin, the pin will turn off and go to 0 volts. Make sure to set the `pinMode`s in the `setup` function. Everything else we're doing in this lab goes in the `loop` function.
+However, before we can use either `digitalWrite` or `digitalRead`, we need to tell the Arduino which pins we'll be reading from and which ones we'll be writing to! If we don't tell it what our intentions are, it's very hard to predict what it will do when we read or write the values of the pins. There is a function called `pinMode` that allows us to set the direction of the pin. Saying `pinMode(3, INPUT)` will set pin 3 to be an input, which is a pin you can read values from. If we say `pinMode(10, OUTPUT)`, it sets pin 10 to be an output, which is a pin you can write values to. If you write a `1` to a pin, the pin will turn on and go to 5 volts. If you write a `0` to a pin, the pin will turn off and go to 0 volts. Make sure to set the `pinMode`s in the `setup` function. Everything else we're doing in this lab goes in the `loop` function.
 
 If we combine the two, we can connect a button to the LED using software! First, we want to read the value of the button. So,
 
@@ -28,11 +23,11 @@ If we combine the two, we can connect a button to the LED using software! First,
 
 and then we can "write" that value to the output pin controlling the LED.
 
-    digitalWrite(4, buttonPushed);
+    digitalWrite(10, buttonPushed);
 
 **Challenge (for a grade): Rewrite that code to just use one line to control the LED, rather than two.**
 
-Now, LED 2 is on pin 5. So, let's make it so that LED 2 is *on* when the user is *not pushing* the button. In C++, if you have a value that is either true or false, you can invert the logical value with an exclamation mark (`!`). So, `!true` is exactly the same as `false`. If I say `bool good = true;` and then `bool notgood = !good;`, `notgood` is equal to false.
+Now, LED 2 is on pin 12. So, let's make it so that LED 2 is *on* when the user is *not pushing* the button. In C++, if you have a value that is either true or false, you can invert the logical value with an exclamation mark (`!`). So, `!true` is exactly the same as `false`. If I say `bool good = true;` and then `bool notgood = !good;`, `notgood` is equal to false.
 
 Attempt to make LED 2 do the opposite of whatever you're telling LED 1 to do. If you have trouble, ask a TA, but make sure to try it yourself, don't just give up immediately. If you get it working with 4 lines of code, try to do it in 3 lines of code in the loop function, and then try to do it again with only 2 lines of code in the loop function.
 
