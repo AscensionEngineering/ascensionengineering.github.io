@@ -72,7 +72,7 @@ This week, we are providing a code template for you, since this lab is a little 
         btnANY
     };
 
-    int read_LCD_buttons()
+    int read_all_buttons()
     {
         int adc_key_in = analogRead(0);
         if (adc_key_in > 1000) return btnNONE;
@@ -95,12 +95,12 @@ This week, we are providing a code template for you, since this lab is a little 
         //wait on a button to be pressed.
         int pressedKey;
         do {
-          pressedKey = read_LCD_buttons();
+          pressedKey = read_all_buttons();
           delay(10);
         } while (pressedKey != keyCode && (pressedKey == btnNONE || keyCode != btnANY));
         
         //wait on the button to be released
-        while (read_LCD_buttons() == pressedKey)
+        while (read_all_buttons() == pressedKey)
           delay(10);
         
         return pressedKey;

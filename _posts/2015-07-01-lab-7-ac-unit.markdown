@@ -5,19 +5,51 @@ date:   2015-07-01 15:20:30
 categories: others
 ---
 
-For this lab, we want to design a simple thermostat for an air conditioner. We're going to use the tri-color LED, a temperature sensor, and the LCD Shield.
+For this lab, we want to design a simple thermostat for an air conditioner. We're going to use the two leds LED, the temperature sensor, and the display.
 
-This is the circuit layout for this week. (Assume the LCD shield is attached to the Arduino.):
-![Lab 7 diagram]({{site.url}}/images/lab_7.jpg)
+The two LEDs will be pins 10 and 11. The first LED will represent cooling, and the second will represent heating.
 
-The red component of the tri-color LED will be connected to pin D11, and the blue will be connected to pin D3. The pins D11 and D3 correspond to pins 11 and 3 on the Arduino. We don't need the green part of the LED for this lab. The temperature sensor will be connected to analog pin A1 (far left pin on the blue S).
-
-Since this is an analog temperature sensor, you simply need to do an `analogRead` to see how the temperature is affecting the voltage output. The formula to convert the voltage to temperature is simple:  `Temperature in °C = (millivolts - 500) / 10`. To get `millivolts`, `millivolts = (5000.0/1024.0) * analogRead(some_pin_number);`
-
-Pulse Width Modulation, PWM, is a technique for initiating an analog output. Since an output pin can *only* ever be HIGH or LOW, you cannot output 3.5 volts, for instance. However, with PWM, you can *average* 3.5 volts on a particular output pin. This works by turning the output on and off *really fast*, and leaving it on for a different length of time than you leave it off. For 2.5 volts, it would just turn it on and off really quickly, but for 3.5 volts, it will stay "on" for longer than it stays "off", and so if you averaged the output value it would be 3.5 volts. This lets us adjust the brightness of an LED in software. For Arduino, in fact, the technique is called `analogWrite`, and it works on pins 3, 5, 6, 9, 10, and 11. So, for this lab, make sure that the red and blue cathodes of your tri-color LED are connected to two of those pins.
+Pulse Width Modulation, PWM, is a technique for imitating an analog output. Since an output pin can *only* ever be HIGH or LOW, you cannot output 3.5 volts, for instance. However, with PWM, you can *average* 3.5 volts on a particular output pin. This works by turning the output on and off *really fast*, and leaving it on for a different length of time than you leave it off. For 2.5 volts, it would just turn it on and off really quickly, but for 3.5 volts, it will stay "on" for longer than it stays "off", and so if you averaged the output value it would be 3.5 volts. This lets us adjust the brightness of an LED in software. For Apollo and for Arduino Unos, the function we need to use is called `analogWrite`, and it works on pins 3, 5, 6, 9, 10, and 11.
 
 `analogWrite` is defined as `void analogWrite(pin, value)`, where `value` is an 8-bit value, 0 to 255. 255 is 5-volts, and 0 is 0-volts.
 
-We will assume that the fan is always circulating air in the building. What we need to control is the temperature of that air. We will start out by targeting 21 degrees Celsius (about 70 degrees Fahrenheit), and the LCD display should always show the currently targeted temperature, along with the current temperature. Make sure to include words on the screen that indicate which number is the target temperature and which is the current temperature. The up and down arrow keys on the LCD shield will control the target temperature, moving it up and down.
+The following code will get you started:
+
+```c++
+#include <LiquidCrystalShift.h>
+#include <Adafruit_BMP280.h>
+
+LiquidCrystalShift lcd(7, 8, A3);
+Adafruit_BMP280 bmp;
+
+void setup() {
+    pinMode(4, INPUT); //down button
+    pinMode(5, INPUT); //up button
+    pinMode(10, OUTPUT);
+    pinMode(11, OUTPUT);
+    lcd.begin(16, 2);
+
+    if (!bmp.begin(0x76)) {
+        lcd.clear();
+        lcd.print("Sensor needs to");
+        lcd.setCursor(0, 1);
+        lcd.print("be turned on.");
+        while (1) {
+            //stay here forever.
+        }
+    }
+}
+
+void loop() {
+    //this will read the temperature in celsius
+    float temp = bmp.readTemperature();
+
+    //do other stuff here
+}
+```
+
+Make sure the "Temp&Light" and "I2C pullup" switches on the DIP switch array are both in the up position, or the sensor will not work.
+
+We will assume that the fan is always circulating air in the building. What we need to control is the temperature of that air. We will start out by targeting 21 degrees Celsius (about 70 degrees Fahrenheit), and the display should always show the currently targeted temperature, along with the current temperature. Make sure to include words on the screen that indicate which number is the target temperature and which is the current temperature. The up and down arrow keys on the Apollo will control the target temperature, moving it up and down.
 
 If the temperature in the room is greater than the target temperature, we want to start lighting up the blue LED, signifying that we're pumping cold air into the room. If it is already colder in the room, then we want to light up the red LED, heating the room. The formula for the analog output value that we're writing to these LEDs should be calculated as such: `int analogVal = (target temperature - current_temperature) * 51;` This will mean that if the two temperatures are 5 degrees apart, we are turning on either the blue LED or the red LED fully. You should check the value of `analogVal`. If it is less than zero, flip the sign so it is positive and `analogWrite` it to the heater. If it is greater than zero, `analogWrite` it to the A/C. **Always** make sure the value is less than 256 before using `analogWrite` with it. If it is greater than 255, then set it to 255. If it is less than -255, set it to -255, but make sure that you are planning to flip the sign from negative to positive before writing it as well. You will be graded on all these conditions.

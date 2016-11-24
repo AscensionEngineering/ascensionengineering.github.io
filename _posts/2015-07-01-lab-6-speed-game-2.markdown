@@ -31,7 +31,7 @@ To read the buttons, copy and paste the following code<sup>[1]</sup> at the top 
         btnNONE
     };
     
-    int read_LCD_buttons()
+    int read_all_buttons()
     {
         int adc_key_in = analogRead(0);
         if (adc_key_in > 1000) return btnNONE;
@@ -45,7 +45,7 @@ To read the buttons, copy and paste the following code<sup>[1]</sup> at the top 
 
 then in your code you can use this function by using code similar to the following:
 
-    int button = read_LCD_buttons();
+    int button = read_all_buttons();
     if (button == btnUP)
     {
         //do something for the up button being pushed
