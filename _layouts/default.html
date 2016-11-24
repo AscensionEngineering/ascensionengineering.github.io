@@ -124,16 +124,6 @@
       </div>
       <div class="col-md-9 col-sm-8 col-xs-12">
       <h2 class="blog-title-pro">{{ page.title }}</h2>
-      <p class="info">
-      {% if page.date %}
-      <span class="time">{{ page.date | date_to_string }}</span>
-      {% endif %}
-      {% if page.categories.size > 0 %}
-    <span class="categories">
-        &raquo; {% for category in page.categories %}<a href="{{ site.fullurl }}/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
-    </span>
-    {% endif %}
-      </p>
         </a>
       </div>
       </div>
