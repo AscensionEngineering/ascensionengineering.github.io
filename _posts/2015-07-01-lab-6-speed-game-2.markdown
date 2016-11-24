@@ -5,7 +5,7 @@ date:   2015-07-01 14:44:30
 categories: others
 ---
 
-It's time for another fun lab! For this lab, we're simply going to use the Apollo's LCD Display.
+It's time for another fun lab! For this lab, we're simply going to use the Apollo's display.
 
 The goal of this lab is to build the speed game another way. The gameplay should be as follows:
 

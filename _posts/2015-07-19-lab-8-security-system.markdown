@@ -5,17 +5,14 @@ date:   2015-07-19 13:05:30
 categories: others
 ---
 
-For this lab, we want to design a simple safe, which will use a display, some buttons, a piezo, and an LED. 
+For this lab, we want to design a simple safe, which will use the display, some buttons, the piezo, and an LED. 
 
-This is the circuit layout for this week:
-![Lab 8 diagram]({{site.url}}/images/lab_8.jpg)
-
-The end result should be that the display starts out showing "UNLOCKED" on the screen, with the red LED on and the green one off, since this is a dangerous state to be in -- anyone could take our stuff! When the user presses "SELECT" it will lock the safe, which involves printing "LOCKED" on the screen, as well as turning on the green LED and turning off the red one. The next time SELECT is pressed, it will ask for a 4-digit code to be entered. If the code is correct, it will return to the unlocked state. If the code is wrong, it will print a message on the screen saying
+The end result should be that the display starts out showing "UNLOCKED" on the screen, with the LED on pin 10 turned on and the LED on pin 11 turned off, since this is a dangerous state to be in -- anyone could take our stuff! When the user presses "SELECT" it will lock the safe, which involves printing "LOCKED" on the screen, as well as turning on the green LED and turning off the red one. The next time SELECT is pressed, it will ask for a 4-digit code to be entered. If the code is correct, it will return to the unlocked state. If the code is wrong, it will print a message on the screen saying
 
           STOP!
      HACKER DETECTED
 
-and then begin flashing the red LED quickly and running the piezoelectric buzzer. The green LED should stay on to indicate that the items in the lockbox are still safe. After about 5 seconds, it should stop and return to the locked state, ready for someone to try to unlock it again.
+and then begin flashing the LED on 10 quickly and running the piezoelectric buzzer. The LED on 11 should stay on to indicate that the items in the lockbox are still safe. After about 5 seconds, it should stop and return to the locked state, ready for someone to try to unlock it again.
 
 To do this, you will want to use an array to store the button sequence. To do this, simply initialize an array like so:
 
