@@ -23,6 +23,6 @@ An array of the aforementioned structs could be constructed as `Note notes[3];`.
 
 Make sure the song is at least 10 notes long with at least 5 different notes, and demonstrate it to the TA.
 
-## Be creative. Playing linearly increasing frequencies is just boring.
+### Be creative. Playing linearly increasing frequencies is just boring.
 
-For some extra guidence on converting a note into frequency, follow this [link]({% post_url 2015-11-09-pitches %}).
+For some extra guidance on converting a note into frequency, follow this [link]({% post_url 2015-11-09-pitches %}).
