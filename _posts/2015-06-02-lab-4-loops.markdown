@@ -5,7 +5,7 @@ date:   2015-06-02 14:35:30
 categories: others
 ---
 
-In this lab, we're going to remove the piezo element and add two more LEDs, for a total of three LEDs.
+In this lab, we're going to remove the piezo element and use two more LEDs, for a total of three LEDs.
 
 Background
 ==========
@@ -62,7 +62,7 @@ do..while example:
         x = get_number_from_user();
     } while (x != 64)
 
-This example uses a hypothetical function called `get_number_from_user` that will return whatever integer the user types in.
+This example uses an imaginary function called `get_number_from_user` that will return whatever integer the user types in.
 If the user types in any number but 64, it will keep asking them until they guess 64. In the case of an input loop, do..while
 is actually often better than a while loop. Below, I've rewritten the do..while using a traditional while, so you can see how
 the do..while enables a more DRY implementation in certain situations.
@@ -85,11 +85,8 @@ As you can see, the different major types all do approximately the same thing, b
 The Lab
 =======
 
-This is the circuit layout for this week:
-![Lab 4 diagram]({{site.url}}/images/lab_4.jpg)
-
-For this lab, we will have three LEDs connected to the Arduino, one each on `pin 3`, `pin 4`, and `pin 5`. There should be a button connected to `pin 2`. If we imagine that this is a water bottle filling station, it would be nice to have some LEDs blinking to draw attention to it. While no one is pushing the button to dispense water, we want to blink all of the LEDs in sequence once per second, from top to bottom. But, while someone is pushing the button we will blink all of them (effectively) at the same time on and then off, repeating, once per second. 
+For this lab, we will have three LEDs connected to the Arduino, one each on `pin 10`, `pin 11`, and `pin 12`. There should be a button connected to `pin 2`. If we imagine that this is a water bottle filling station, it would be nice to have some LEDs blinking to draw attention to it. While no one is pushing the button to dispense water, we want to blink all of the LEDs in sequence once per second, from top to bottom. But, while someone is pushing the button we will blink all of them (effectively) at the same time on and then off, repeating, once per second. 
 
 For this prototype of the LED system, we are only using 3 LEDs, but there is discussion that the production version could use upwards of 20 LEDs. It is conceivable that you could write a line of code for each LED to turn it on and then to turn it off when there are only 3, but it will quickly become unmaintainable on the production version, so you should use a `for` loop. A `for` loop is excellent for this, because it will repeat an action over a precisely known set of times.
 
-`for (int i = 3; i <= 5; i++)` will iterate such that i = 3, 4, and then 5. Using the cumulative knowledge you've built up to this point, see what you can do to make this happen.
+`for (int i = 10; i <= 12; i++)` will iterate such that i = 10, 11, and then 12. Using the cumulative knowledge you've built up to this point, see what you can do to make this happen.
