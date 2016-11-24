@@ -61,4 +61,3 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 **New Functions and Keywords:** [`struct`]({% post_url 2015-07-08-struct %})  
 **Description:** Using an array of structs that consist of a frequency and a length, students will play songs.  
 
-### Labs 11 and 12 will be free form, see syllabus for more details.
