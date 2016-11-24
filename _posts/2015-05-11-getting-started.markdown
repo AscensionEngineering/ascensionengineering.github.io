@@ -5,7 +5,9 @@ date:   2015-05-11 12:37:30
 categories: others
 ---
 
-To get started with Arduino, you need to download and install the Arduino IDE.
+## 1. Download the IDE
+
+To get started with Apollo, you need to download and install the Arduino IDE.
 
 Debian / Ubuntu Linux:
 
@@ -28,31 +30,51 @@ Windows:
 3. You will probably need to follow [these instructions][Instructions] to install additional drivers.
   1. [This page][ScreenshotTutorial] is slightly outdated, but could be helpful.
 
+## 2. Download the libraries
+
+After installing the IDE, download the folowing libraries and extract them to your Arduino libraries folder located at 
+C:\Users\your name\Documents\Arduino\libraries
+
+the libraries can be downloaded from these links:
+
+- [Ascension's LiquidCrystalShift Driver (LCD module)](https://github.com/coder543/LiquidCrystalShift/archive/master.zip)
+- [Adafruit's TSL2561 Driver (light sensor)](https://github.com/adafruit/TSL2561-Arduino-Library/archive/master.zip)
+- [Adafruit's Unified Sensor Driver (part of the light sensor driver)](https://github.com/adafruit/Adafruit_Sensor/archive/master.zip)
+- [Adafruit's BMP280 Driver (temperature and pressure sensor)](https://github.com/adafruit/Adafruit_BMP280_Library/archive/master.zip)
+
+## 3. Test that it works
+
 Now that the Arduino IDE is installed, it is time to make sure everything is working.
 
 1. Open the IDE
 2. Go to File -> Examples -> 01.Basics -> Blink
 3. Go to Tools -> Serial Port and then click on the Arduino
+4. Go to Tools -> Board -> Genuino Uno
 3. Click the button in the toolbar that looks like an arrow facing to the right.
 
-If your Arduino IDE is configured correctly and your Arduino is plugged in, you should have an LED blinking on it now.
+If your Arduino IDE is configured correctly and your Apollo is plugged in, you should have an LED blinking on it now.
 
-We want to check the LCD Shield, so plug it into the Arduino now, and we'll create a short little program to use it. When you connect the LCD Shield, it should fit down all the way onto the Arduino, with little or no copper from the pins showing after being pushed into the socket. This may take some force, just be careful not to break anything.
+Now lets test out the display, copy and past the folowing code into the Arduino ide.
 
-Create a new sketch by clicking on File -> New. Before the first line, which says `void setup() {`, we want to put these lines:
+```
+#include <LiquidCrystalShift.h>   //This line of code creates a global instance of the LCD module
+LiquidCrystalShift lcd(7, 8, A3); //The next thing that needs to be done is to place "lcd.begin(16, 2)"
+                                  //in your setup function, as shown below
+void setup() {
+    lcd.begin(16, 2); //This line sets up the display
+}
 
-    #include <LiquidCrystal.h>
-    LiquidCrystal lcd(8, 9, 4, 5, 6, 7);           // select the pins used on the LCD panel
+//Inside your loop function, or anywhere else, you can display
+//text and values on the screen by using print statements
+void loop() { 
+    lcd.setCursor(0, 0); //resets the cursor to the top left of the screen 
+    lcd.print("Hello World!"); //prints "Hello World!" to the screen
+}
+```
 
-That last line of code will make a new variable called `lcd` that will handle all of the talking with our LCD shield. Now, after the line that says `void setup() {`, let's put the following code:
+If you run the code now, you should see Hello, World on the display!
 
-    lcd.begin(16, 2); //it is a 16 x 2 character display
-    lcd.print("Hello, World!");
-
-If you run the code now, you should see Hello, World on your shield! If not, we need to figure out why.
-
-Submit your code to Dropbox.
 
 [ArduinoIDE]:         http://www.arduino.cc/en/Main/Software
 [Instructions]:       http://www.arduino.cc/en/Guide/Windows#toc4
-[ScreenshotTutorial]: http://www.arduino.cc/en/Guide/UnoDriversWindowsXP
+
