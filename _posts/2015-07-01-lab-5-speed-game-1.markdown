@@ -5,22 +5,25 @@ date:   2015-07-01 13:22:30
 categories: others
 ---
 
-It's time for a fun lab! For this lab, we're going to use two buttons, two LEDs, and the big tri-color LED.
+It’s time for a fun lab! For this lab, we’re going to use two buttons, the piezo speaker, and several LEDs
 
 The goal of this lab is to build a speed game. The gameplay should be as follows:
 
-- set the tri-color LED to red
+- simultaneously blink LED 7 and click the piezo buzzer 3 times delaying for 333 milliseconds in
+between to signify the game is about to start
 - wait for a random amount of time (no more than 10 seconds)
-- set the tri-color LED to green
-- whenever a user presses their button after this point, the tri-color LED changes to blue to signify the game is over, and the LED in front of that user turns on to let them know that they were the winner.
-- wait 2 seconds, then reset the tri-color to red and start over
+- light up LED 7 (indefinitely until someone presses their button)
+- immediately begin buzzing the buzzer continuously for about 100 milliseconds (turning it on and off rapidly)
+- whenever a user presses their button after this point, the LED on pin 7 turns off and the buzzer sounds for another 100 milliseconds to signify the game is over. The LED corresponding to the user turns on to let them know that they were the winner.
+- wait 4 seconds, then start over
 
-There are only two pieces of information you need to complete this lab that you don't already have: `random` and how to use the tri-color LED.
+To complete this lab you only need 1 new piece of information you do not already have, the random
+function.
 
-`random` is defined roughly as `long random([long min], long max)`. The brackets indiciating that the `min` parameter is optional, if you only provide one argument it will be treated as the maximum.
+Random is defined roughly as random([long min], long max), which returns a randomly generated
+number between the min and max values. The brackets indicating that the min parameter is optional, if
+you only provide one argument it will be treated as the maximum.
 
-The tri-color LED is really just 3 LEDs in one package. There is nothing special about it. It has four pins, three of which are cathodes, and one of which is the common anode. The longest pin is the common anode, which means that it will be connected to 5 volts. The lone pin beside it is the red cathode, the pin on the other side is green, and the pin farther away is blue. Each cathode should be connected to a 560 ohm resistor, and then the output of that resistor connected to a pin on the Arduino. When the output on that pin is HIGH, there is no voltage difference between the input and the output, so the LED will be off. When the output is LOW, electricity can drain through the LED into the pin on the Arduino. So, by default, you should keep the LED pins for the tri-color HIGH, and then turn each one LOW whenever you want to turn it on.
-
-`pin 6` and `pin 10` are for Player 1, and `pin 3` and `pin 11` are for Player 2.
+`pin 10` and `pin 6` are for Player 1, `pin 3` and `pin 12` are for Player 2.
 
 Good luck!
