@@ -5,7 +5,7 @@ date:   2015-07-01 13:22:30
 categories: others
 ---
 
-It’s time for a fun lab! For this lab, we’re going to use two buttons, the piezo speaker, and several LEDs
+It's time for a fun lab! For this lab, we’re going to use two buttons, the piezo speaker, and several LEDs!
 
 The goal of this lab is to build a speed game. The gameplay should be as follows:
 
