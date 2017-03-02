@@ -15,11 +15,11 @@ The goal of this lab is to build the speed game another way. The gameplay should
 - when one user presses their button after this point, the LCD should show a message indicating both that the game is over and who won.
 - wait 2 seconds, then start it all over.
 
-The only new information you need is to be able to read the buttons on the LCD shield, but if you don't remember how to set it up and write to the LCD, feel free to [review the first tutorial]({% post_url 2015-05-11-getting-started %}).
+If you don't remember how to write to the LCD, feel free to [review the first tutorial]({% post_url 2015-05-11-getting-started %}).
 
-To clear the LCD screen, simply say `lcd.clear()` and `lcd.setCursor(0, 0)`.
+To clear the LCD screen, simply write `lcd.clear()`. Writing `lcd.setCursor(0, 0)` will let you move the cursor back to the top left of the display, and this should also automatically happen when you use `lcd.clear()`.
 
-To read the buttons, copy and paste the following code<sup>[1]</sup> at the top of your file:
+To read the buttons, copy and paste the following code at the top of your file:
 
     enum Keycodes : int
     {
@@ -56,7 +56,3 @@ and `button` will now have the keycode for the button that was pushed.
 I recommend using `btnLEFT` and `btnRIGHT` for the two user buttons, but you can use whichever ones seem most appropriate.
 
 Good luck!
-
-(Note: A 10ms delay is recommended between reads of the LCD buttons.  Without the delay, there is an error in the returned value which causes unintentional button presses.)
-
-<sup>[1]</sup> button code is adapted from the [LCD shield's documentation](https://www.dfrobot.com/wiki/index.php?title=LCD_KeyPad_Shield_For_Arduino_SKU:_DFR0009#Tutorial)
