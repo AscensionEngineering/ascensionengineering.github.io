@@ -32,14 +32,12 @@ To read the buttons, copy and paste the following code<sup>[1]</sup> at the top 
     };
     
     int read_all_buttons()
-    {
-        int adc_key_in = analogRead(0);
-        if (adc_key_in > 1000) return btnNONE;
-        if (adc_key_in < 50)   return btnRIGHT;  
-        if (adc_key_in < 250)  return btnUP; 
-        if (adc_key_in < 450)  return btnDOWN; 
-        if (adc_key_in < 650)  return btnLEFT; 
-        if (adc_key_in < 850)  return btnSELECT;  
+    {  
+        if (digitalRead(3))  return btnRIGHT;  
+        if (digitalRead(5))  return btnUP; 
+        if (digitalRead(4))  return btnDOWN; 
+        if (digitalRead(6))  return btnLEFT; 
+        if (digitalRead(2))  return btnSELECT;  
         return btnNONE;
     }
 
