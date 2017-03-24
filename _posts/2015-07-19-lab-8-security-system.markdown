@@ -7,7 +7,7 @@ categories: others
 
 For this lab, we want to design a simple safe, which will use the display, some buttons, the piezo, and an LED. 
 
-The end result should be that the display starts out showing "UNLOCKED" on the screen, with the LED on pin 10 turned on and the LED on pin 11 turned off, since this is a dangerous state to be in -- anyone could take our stuff! When the user presses "SELECT" it will lock the safe, which involves printing "LOCKED" on the screen, as well as turning on the green LED and turning off the red one. The next time SELECT is pressed, it will ask for a 4-digit code to be entered. If the code is correct, it will return to the unlocked state. If the code is wrong, it will print a message on the screen saying
+The end result should be that the display starts out showing "UNLOCKED" on the screen, with the LED on pin 10 turned on and the LED on pin 11 turned off, since this is a dangerous state to be in -- anyone could take our stuff! When the user presses "SELECT" it will lock the safe, which involves printing "LOCKED" on the screen, as well as turning on the "locked" LED and turning off the "unlocked" one. The next time SELECT is pressed, it will ask for a 4-digit code to be entered. If the code is correct, it will return to the unlocked state. If the code is wrong, it will print a message on the screen saying
 
           STOP!
      HACKER DETECTED
@@ -54,8 +54,8 @@ This week, we are providing a code template for you, since this lab is a little 
     #include <LiquidCrystalShift.h>
     LiquidCrystalShift lcd(7, 8, A3);
 
-    int redLED = 10;
-    int greenLED = 11;
+    int unlockedLED = 10;
+    int lockedLED = 11;
     int piezo = 9;
 
     enum Keycodes : int
@@ -103,8 +103,8 @@ This week, we are providing a code template for you, since this lab is a little 
 
 
     void setup() {
-      pinMode(redLED, OUTPUT);
-      pinMode(greenLED, OUTPUT);
+      pinMode(unlockedLED, OUTPUT);
+      pinMode(lockedLED, OUTPUT);
       pinMode(piezo, OUTPUT);
       lcd.begin(16, 2); //it is a 16 x 2 character display
       // put your setup code here, to run once:
@@ -152,8 +152,8 @@ This week, we are providing a code template for you, since this lab is a little 
     void unlock() {
       lcd.clear();
       lcd.print("UNLOCKED");
-      digitalWrite(redLED, HIGH);
-      digitalWrite(greenLED, LOW);
+      digitalWrite(unlockedLED, HIGH);
+      digitalWrite(lockedLED, LOW);
       waitForKey(btnSELECT);
       lock();
     }
@@ -195,7 +195,7 @@ This week, we are providing a code template for you, since this lab is a little 
     void unlockFailure() {
       /* You must implement the unlockFailure function
        *
-       * This function will flash the red LED and make
+       * This function will flash the "unlocked" LED and make
        * the piezoelectric speaker buzz, as described
        * in the lab documentation. It should do so for
        * approximately 5 seconds, while showing the given
