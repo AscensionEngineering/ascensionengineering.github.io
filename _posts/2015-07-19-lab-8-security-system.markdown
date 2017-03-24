@@ -51,12 +51,12 @@ This week, we are providing a code template for you, since this lab is a little 
     *             CAPITAL TEXT
     *  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     */
-    #include <LiquidCrystal.h>
-    LiquidCrystal lcd(8, 9, 4, 5, 6, 7);           // select the pins used on the LCD panel
+    #include <LiquidCrystalShift.h>
+    LiquidCrystalShift lcd(7, 8, A3);
 
-    int redLED = 11;
-    int greenLED = 12;
-    int piezo = 3;
+    int redLED = 10;
+    int greenLED = 11;
+    int piezo = 9;
 
     enum Keycodes : int
     {
